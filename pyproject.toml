@@ -3,7 +3,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "krpc"
+name = "ksj-rpc"
 authors = [{ name = "Song Jian", email = "2175616761@qq.com" }]
 description = "A Simple Python Library for RPC"
 readme = "README.md"
