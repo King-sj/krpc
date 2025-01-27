@@ -48,7 +48,7 @@ Source = "https://github.com/King-sj/krpc"
 Tracker = "https://github.com/King-sj/krpc/issues"
 
 [tool.flit.module]
-name = "python_package"
+name = "ksj_rpc"
 
 [tool.bandit]
 exclude_dirs = ["build", "dist", "tests", "scripts"]
