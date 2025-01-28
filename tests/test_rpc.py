@@ -1,13 +1,11 @@
 from __future__ import annotations
 
-import json
-
 import pytest
 
 from rpc import RPCClient, RPCServer
 
 
-def test_rpc_client_server():
+def test_rpc_client_server(unit_test_mocks: None):
   server = RPCServer()
   def test(*args, **kwargs):
     print(f"function test called with args: {args} and kwargs: {kwargs}")

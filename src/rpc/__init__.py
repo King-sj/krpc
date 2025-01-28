@@ -13,7 +13,7 @@
 # 支持 延迟类型注解
 from __future__ import annotations
 
-__version__ = "0.0.2"
+__version__ = "1.0.0"
 
 from rpc.client import RPCClient
 from rpc.server import RPCServer
