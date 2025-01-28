@@ -7,7 +7,7 @@ import pytest
 from rpc import RPCClient, RPCServer
 
 
-def test_int_rpc_client_server():
+def test_rpc_client_server():
   server = RPCServer()
   def test(*args, **kwargs):
     print(f"function test called with args: {args} and kwargs: {kwargs}")
