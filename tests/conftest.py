@@ -7,8 +7,12 @@ This is a configuration file for pytest containing customizations and fixtures.
 
 In VSCode, Code Coverage is recorded in config.xml. Delete this file to reset reporting.
 """
-
 from __future__ import annotations
+
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from typing import List
 
