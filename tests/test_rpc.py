@@ -21,8 +21,7 @@ def test_int_rpc_client_server():
   client = RPCClient()
   client.connect('127.0.0.1', 8000)
 
-  result = client.test('测试项', kw1="1")
-  res = json.loads(result)
+  res = client.test('测试项', kw1="1")
   assert res['res'] == 'test called '
 
   server.stop()
