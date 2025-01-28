@@ -32,16 +32,16 @@ class JSONRPC:
     '''
     Call the method and return the result
     '''
-    fn = self.data['method_name'] # type: ignore
-    args = self.data['method_args'] # type: ignore
-    kwargs = self.data['method_kwargs'] # type: ignore
+    fn = self.data['name'] # type: ignore
+    args = self.data['args'] # type: ignore
+    kwargs = self.data['kwargs'] # type: ignore
 
     if fn in self.functions: # type: ignore
       res = self.functions[fn](*args, **kwargs) # type: ignore
     else:
       res = f'Function {fn} not found'
     data = {
-      'result': res
+      'res': res
     }
     return json.dumps(data)
 
@@ -56,6 +56,7 @@ class RPCServer(TCPServer, JSONRPC, RPCStub):
     '''
     Process the request
     '''
+    # dat
     self.from_json(data)
     return self.call_method()
 

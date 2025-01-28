@@ -20,7 +20,7 @@ class TCPServer:
     Accept a connection, receive data, and close the connection
     '''
     conn, addr = self._socket.accept()
-    r = conn.recv(length).decode('utf-8')
+    r = conn.recv(length)
     data = self.process_request(r) # type: ignore
     conn.sendall(data.encode('utf-8'))
     conn.close()

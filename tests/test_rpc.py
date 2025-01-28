@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import pytest
 
 from rpc import RPCClient, RPCServer
@@ -20,7 +22,8 @@ def test_int_rpc_client_server():
   client.connect('127.0.0.1', 8000)
 
   result = client.test('测试项', kw1="1")
-  assert result == 'test called '
+  res = json.loads(result)
+  assert res['res'] == 'test called '
 
   server.stop()
   server_thread.join()
